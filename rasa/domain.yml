@@ -1,0 +1,132 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - search_AI_course
+  - inform_email
+  - inform_guidance
+  - search_3D printing_course
+  - contact_call_executive
+  - contact_email_executive
+  - contact_phone_executive
+  - inform_information_phone
+  - inform_email_havecourse
+  - inform_email_nocourse
+  - inform_email_phonecall
+  - inform_email_email
+  - inform_email_havenofreeaccess
+  - inform_email_havefreeaccess
+
+slots:
+  email:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: email
+  phone_number:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: phone_number
+#  course_name:
+#    type: any
+#    influence_conversation: false
+#    mappings:
+#      - type: from_entity
+#        entity: course_name
+
+entities:
+    - email
+    - phone_number
+
+forms:
+  email_form:
+    required_slots:
+      - email
+  phone_form:
+    required_slots:
+      - phone_number
+      - email
+
+
+actions:
+  - phone_form
+  - email_form
+  - action_default_fallback
+
+responses:
+  utter_greet:
+  - text: "Hello, how can I help you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_bye:
+  - text: "Ok, I hope you can use me again next time."
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_ask_email:
+  - text: "What's your E-mail address?"
+
+  utter_information_subscription_havecourse:
+    - text: "The system shows that your free access to the three-chapter course content has been terminated. You'll also have access to seven courses this month."
+
+  utter_ask_guidance:
+    - text: "Do you need In-person guidance?"
+
+  utter_information_guidance:
+    - text: "I am checking whether the tutor is available."
+
+  utter_confirm:
+    - text: "Now the tutor has accepted your request. You need to pay $20 for this service."
+
+  utter_ask_feedback:
+    - text: "Are you satisfied with the service? Do you have any feedback?"
+
+  utter_no_course:
+    - text: " I'm sorry. We only provide AI and Machine Learning courses."
+
+  utter_contact_executive:
+    - text: "You want to contact a human executive or Speak to the executive immediately by phone or email."
+
+  utter_call_information:
+    - text: "Ok,I'm connecting to a human supervisor named Jack now."
+
+  utter_information_subscription3:
+    - text: "The system shows you have three more free course visits."
+
+  utter_information_subscription4:
+    - text: "The system shows you have no free course access. So you need to pay for the courses you are interested in."
+
+  utter_email_information:
+    - text: "Ok,Our E-mail address is group17@gmail.com. you can send your query."
+
+  utter_ask_phone_information:
+    - text: "Ok,What's your telephone number?"
+
+  utter_permission_obtain:
+    - text: " Permission has been obtained. I will ask Executive Li to contact you immediately."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

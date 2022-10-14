@@ -1,0 +1,125 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: search for course (have course)1
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: search_AI_course
+    - action: utter_ask_email
+    - intent: inform_email_havecourse
+    - action: utter_information_subscription_havecourse
+    - action: utter_ask_guidance
+    - intent: inform_guidance
+    - action: utter_information_guidance
+    - action: utter_confirm
+    - action: utter_ask_feedback
+    - intent: deny
+    - action: utter_bye
+
+- story: search for course (no course)2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_3D printing_course
+  - action: utter_ask_email
+  - intent: inform_email_nocourse
+  - action: utter_no_course
+  - action: utter_contact_executive
+  - intent: contact_call_executive
+  - action: utter_call_information
+  - action: utter_ask_feedback
+  - intent: deny
+  - action: utter_bye
+
+- story: search for course (have free access)3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_AI_course
+  - action: utter_ask_email
+  - intent: inform_email_havefreeaccess
+  - action: utter_information_subscription3
+  - action: utter_ask_guidance
+  - intent: inform_guidance
+  - action: utter_information_guidance
+  - action: utter_confirm
+  - action: utter_ask_feedback
+  - intent: deny
+  - action: utter_bye
+
+- story: search for course (have no free access)4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_AI_course
+  - action: utter_ask_email
+  - intent: inform_email_havenofreeaccess
+  - action: utter_information_subscription4
+  - action: utter_ask_guidance
+  - intent: inform_guidance
+  - action: utter_information_guidance
+  - action: utter_confirm
+  - action: utter_ask_feedback
+  - intent: deny
+  - action: utter_bye
+
+- story: connecting to a human supervisor (email)5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_3D printing_course
+  - action: utter_ask_email
+  - intent: inform_email_email
+  - action: utter_no_course
+  - action: utter_contact_executive
+  - intent: contact_email_executive
+  - action: utter_email_information
+  - action: utter_ask_feedback
+  - intent: deny
+  - action: utter_bye
+
+- story: connecting to a human supervisor (phone call)6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_3D printing_course
+  - action: utter_ask_email
+  - intent: inform_email_phonecall
+  - action: utter_no_course
+  - action: utter_contact_executive
+  - intent: contact_phone_executive
+  - action: utter_ask_phone_information
+  - intent: inform_information_phone
+  - action: utter_permission_obtain
+  - action: utter_ask_feedback
+  - intent: deny
+  - action: utter_bye

@@ -1,0 +1,20 @@
+version: '3.0'
+services:
+  rasa:
+    container_name: "rasa_server"
+    image: herms/net
+    ports:
+      - 8080:8080
+    volumes:
+      - ./:/app
+
+  action_server:
+    container_name: "action_server"
+    image: herms/net
+    ports:
+      - 5055:5055
+    volumes:
+      - ./actions:/app/actions
+    command:
+      - run
+      - actions

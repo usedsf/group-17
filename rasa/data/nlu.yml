@@ -1,0 +1,159 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hello
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - Yes. I'm very pleased with the service, and I have no feedback.
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: search_AI_course
+  examples: |
+    -  I want to search for courses on AI courses.
+    -  AI courses.
+
+- intent: inform_guidance
+  examples: |
+    - Yes, I need Mr. Li's guidance service.
+    - i need guidance.
+
+- intent: search_3D printing_course
+  examples: |
+    - I want to search for courses on 3D printing.
+    - i want 3D printing courses.
+
+- intent: contact_call_executive
+  examples: |
+    - I want to get in touch with a human supervisor and chat with them.
+    - i want to chat with a human supervisor.
+
+- intent: contact_email_executive
+  examples: |
+    - I want to get in touch with a human supervisor and I will provide detailed enquiries in an email.
+    - i want to send a email to your human supervisor.
+
+- intent: contact_phone_executive
+  examples: |
+    - I want to get in touch with a human supervisor and I want to speak to an executive immediately on the phone.
+    - i want to take a phone to your human supervisor.
+
+- intent: inform_information_phone
+  examples: |
+    - My telephone number is 19119201701.
+    - 19119201701.
+
+- intent: inform_email_havecourse
+  examples: |
+    - My E-mail address is [havecourse@gmail.com](email).
+    - [havecourse@gmail.com](email).
+
+- intent: inform_email_nocourse
+  examples: |
+    - My E-mail address is [nocourse@gmail.com](email).
+    - [nocourse@gmail.com](email).
+
+- intent: inform_email_phonecall
+  examples: |
+    - My E-mail address is [phonecall@gmail.com](email).
+    - [phonecall@gmail.com](email).
+
+- intent: inform_email_email
+  examples: |
+    - My E-mail address is [email@gmail.com](email).
+    - [email@gmail.com](email).
+
+- intent: inform_email_havenofreeaccess
+  examples: |
+    - My E-mail address is [havenofreeaccess@gmail.com](email).
+    - [havenofreeaccess@gmail.com](email).  
+
+- intent: inform_email_havefreeaccess
+  examples: |
+    - My E-mail address is [havefreeaccess@gmail.com](email).
+    - [havefreeaccess@gmail.com](email).
+    
